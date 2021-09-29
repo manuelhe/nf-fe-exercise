@@ -1,0 +1,122 @@
+[
+  {
+    "id": "page-01",
+    "title": "Who is the primary contact for this policy?",
+    "description": "This person will receive all communications from Newfront about this policy. You can change this contact information later. If you’re not sure, just add your contact information.",
+    "fields": [
+      {
+        "id": "full-name",
+        "label": "Full name",
+        "type": "text",
+        "is_required": true,
+        "error_message": "You need to specify a valid Name"
+      },
+      {
+        "id": "role",
+        "label": "Role",
+        "type": "text"
+      },
+      {
+        "id": "phone-number",
+        "label": "Phone number",
+        "type": "text",
+        "is_required": true,
+        "error_message": "You need to specify a valid Phone number"
+      }
+    ]
+  },
+  {
+    "id": "page-02",
+    "title": "Tell us about your company",
+    "fields": [
+      {
+        "id": "company-name",
+        "label": "Company name",
+        "type": "text",
+        "is_required": true,
+        "error_message": "You need to specify a valid Company name"
+      },
+      {
+        "id": "fein",
+        "label": "What is your Federal Employer Identification Number? (FEIN)",
+        "type": "text",
+        "is_required": true,
+        "error_message": "You need to specify a FEIN"
+      },
+      {
+        "id": "years-in-business",
+        "label": "Years in business",
+        "type": "number"
+      },
+      {
+        "id": "phone-number",
+        "label": "Phone number",
+        "type": "text",
+        "is_required": true,
+        "error_message": "You need to specify a valid Phone number"
+      },
+      {
+        "id": "operation-states",
+        "label": "In which states do you operate?",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "id": "page-03",
+    "title": "Tell us about your employees",
+    "fields": [
+      {
+        "id": "health-provider",
+        "label": "What’s the name of the clinic, physician, or ER used for work injuries?",
+        "type": "text"
+      },
+      {
+        "id": "has-group-medical-insurance",
+        "label": "Do you provide group medical insurance?",
+        "type": "checkbox"
+      },
+      {
+        "id": "has-retirement-plan",
+        "label": "Do you offer a retirement or pension plan?",
+        "type": "checkbox"
+      },
+      {
+        "id": "has-paid-vacation",
+        "label": "Do you give paid vacation?",
+        "type": "checkbox"
+      },
+      {
+        "id": "paid-vacation-details",
+        "label": "Please provide details about the paid vacation",
+        "type": "text",
+        "depends_on": "has-paid-vacation",
+        "is_required": true,
+        "error_message": "You need to specify a valid Phone number"
+      }
+    ]
+  },
+  {
+    "id": "page-04",
+    "title": "How do you want to pay for your policy?",
+    "fields": [
+      {
+        "id": "payment-mode",
+        "type": "selectable-option-group",
+        "options": [
+          {
+            "id": "pay-to-newfront",
+            "label": "I want to pay Newfront",
+            "description": "You’ll pay Newfront instead of paying each insurance company separately. There are no fees.",
+            "badgeType": "primary"
+          },
+          {
+            "id": "pay-to-provider",
+            "label": "I want to pay the insurance company directly",
+            "description": "You’ll receive bills from the insurance company and it will be your responsibility to make sure they are paid to keep your coverage."
+          }
+        ]
+      }
+    ]
+  }
+]
